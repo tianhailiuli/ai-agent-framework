@@ -70,7 +70,7 @@ python main.py
 python launch.py --foreground
 ```
 
-访问 http://localhost:5000 打开交互界面。
+访问 http://localhost:8080 打开交互界面。
 
 ### 4. 命令行入口（安装后）
 
@@ -114,7 +114,7 @@ ai-agent-framework/
 | `AGENT_MODE` | `function_calling` | `function_calling` 或 `react` |
 | `MEMORY_DB_PATH` | `memory.db` | SQLite 数据库路径 |
 | `SAFE_FILE_BASE_PATH` | `./data` | 文件工具允许的最高目录 |
-| `FLASK_PORT` | `5000` | Web 服务端口 |
+| `FLASK_PORT` | `8080` | Web 服务端口 |
 | `MAX_REACT_ITERATIONS` | `10` | 最大推理轮数 |
 
 ## 🧪 测试
