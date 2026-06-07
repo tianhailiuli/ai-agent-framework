@@ -235,8 +235,8 @@ python -m build
 
 ## 11. 已知限制
 
-1. **LLM 强绑定**：目前只兼容 OpenAI-compatible API。要加其他 Provider，改 `LLMClient` 的 payload 构造
+1. **LLM 强绑定**：目前使用 OpenAI-compatible 协议（/v1/chat/completions），因此天然支持所有提供该协议的 Provider（OpenAI、Kimi、DeepSeek、通义千问、智谱等）。不支持非兼容协议的 Provider（如 Claude 原生 API、Gemini 原生 API）
 2. **记忆召回简单**：关键词匹配，不是向量检索。长文档相关度低
 3. **前端原生 JS**：没有框架，维护成本随复杂度上升
-4. **killall 太暴力**：`launch.py --killall` 杀所有 python.exe，生产环境禁用
+4. **killall 太暴力**：`launch.py --killall` 杀所有 python.exe，生产环境禁用——因为经常会在多次使用/测试后进程卡死，还没优化先用killall凑合hhh
 5. **Windows 为主**：`port_guard.py` 的 `taskkill` 和 `CREATE_NEW_PROCESS_GROUP` 是 Windows 逻辑，Linux/Mac 需要适配
