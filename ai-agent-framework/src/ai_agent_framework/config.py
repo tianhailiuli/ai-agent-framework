@@ -34,7 +34,7 @@ SAFE_FILE_BASE_PATH = os.getenv("SAFE_FILE_BASE_PATH", "./data")
 
 # Web Server
 FLASK_HOST = os.getenv("FLASK_HOST", "0.0.0.0")
-FLASK_PORT = int(os.getenv("FLASK_PORT", "5000"))
+FLASK_PORT = int(os.getenv("FLASK_PORT", "8080"))
 FLASK_DEBUG = os.getenv("FLASK_DEBUG", "False").lower() == "true"
 
 # Agent Behavior
